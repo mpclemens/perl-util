@@ -1,0 +1,10 @@
+randpass.pl
+
+   For the obligatory picking of passwords: allows overall size
+   limits, and outputs in chunks as well as a copy/paste block.  No
+   special characters in the original set, but that's easily tweakable.
+
+spinny/
+
+   A genetic algorithm to choose letters for a child's early-reading
+   toy.

@@ -1,0 +1,40 @@
+Code to help build a home-made "spinny speller" toy for our
+pre-reading child. The toy is simple: three wooden blocks threaded on
+a common axis, so that each block can present one of four lettered
+faces. Turning the blocks offers new words, hopefully.
+
+This automated deciding what letters to affix to each block to make
+the most combinations of valid words, without too many non-words. The
+pool of valid words is set up in the scripts, to avoid obvious
+scatology from older siblings (e.g. A-S-S)
+
+all_word_spinner.pl
+    Genetic algorithm to determine the best possible letters per block, in a fixed
+    number of generations, starting with three-letter words taken from 
+    /usr/share/dict/words and limited to those of the consonant/vowel/consonant form.
+
+    Output is the final score of the overall string, followed by
+    letters that should appear on the four block faces.
+
+    Usage:
+
+    perl all_word_spinner.pl > blocks.txt
+
+    Progress is echoed to STDERR (2000 generations)
+
+Earlier experiments:
+
+freq_word_spinner.pl
+    Genetic algorithm picking only from the "high frequency" early-reader word list, 
+
+check_word_spinner.pl
+    Accepts the block letters with params -1 -2 -3 and outputs the valid word combinations
+
+    > perl check_word_spinner.pl -1 hlps -2 aeio -3 dptw
+
+    hap hed het hiw 
+    lat lep lew liw lod 
+    ped pid piw pow 
+    sed sep sid siw 
+
+    Words: 47 Non-words: 17 Score: 73.44% for hlps,aeio,dptw
