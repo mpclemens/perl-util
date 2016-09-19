@@ -1,3 +1,11 @@
+mysql_objs.pl
+
+   Helper script used to query the metadata schema
+   "information_schema" in a MySQL instance and pull out the objects
+   of interest: tables, views, procedures and functions. This is a
+   recreation of a script I had done before, to assist as a DBE and
+   to ease keeping the DB source code in version control.
+
 randpass.pl
 
    For the obligatory picking of passwords: allows overall size
