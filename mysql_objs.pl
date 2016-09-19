@@ -45,7 +45,7 @@ connection will be made, but no directories or files will be output
 $host = 'localhost';
 $port =  '3306';
 
-if ($opts{'h'} =~ /^[^:]+:?(\d+)?$/) {
+if ($opts{'h'} =~ /^([^:]+):?(\d+)?$/) {
     $host = $1 or 'localhost';
     $port = $2 or '3306';
     printf STDERR ("Host: %s Port: %s\n",$host,$port) if ($debug_mode);
